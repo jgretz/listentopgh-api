@@ -2,8 +2,9 @@ import nodeBits, {GET, POST, PUT, DELETE, OPTIONS} from 'node-bits';
 import nodeBitsExpress, {cors, bodyParser} from 'node-bits-express';
 import nodeBitsCode from 'node-bits-code';
 import nodeBitsSpa from 'node-bits-spa';
+import nodeBitsSql from 'node-bits-sql';
 
-import {configureCompression} from './util';
+import {configureCompression, configureDatabaseConnection} from './util';
 
 nodeBits([
   nodeBitsExpress({
@@ -22,4 +23,5 @@ nodeBits([
   nodeBitsSpa({
     path: `${__dirname}/site`,
   }),
+  nodeBitsSql({connection: configureDatabaseConnection}),
 ]);
