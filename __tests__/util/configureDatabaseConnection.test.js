@@ -3,8 +3,8 @@ import Sequelize from 'sequelize';
 
 describe('Configure Database Connection', () => {
   it('should return a Sequelize instance', () => {
-    const db = configureDatabaseConnection();
+    configureDatabaseConnection();
 
-    expect(db).toBeInstanceOf(Sequelize);
+    expect(Sequelize).toHaveBeenCalled();
   });
 });
