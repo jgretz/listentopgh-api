@@ -13,5 +13,6 @@ export const BUS_API_KEY = privateKeys.busApiKey;
 export const DATABASE_CONNECTION = privateKeys.databaseConnection;
 
 // apply public constants
+export const PRODUCTION = 'PRODUCTION';
 export const BUS_FEED = 'Port Authority Bus';
 export const CACHED_ROUTES = ['/api/version', '/api/busLocationsForDay'];
