@@ -10,7 +10,19 @@
     "build": "node tools/build.js",
     "debug": "nodemon --exec babel-node --inspect --presets es2015 src/index.js --inspect",
     "nodemon": "NODE_ENV=DEV nodemon src/index.js --exec babel-node",
-    "start": "babel-node src/index.js"
+    "start": "babel-node src/index.js",
+    "tests": "jest",
+    "precommit": "lint-staged && yarn tests"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --color --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "jest-extended"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -31,14 +43,22 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "babel-runtime": "^6.26.0",
+    "dumper.js": "^1.1.1",
     "eslint": "^5.2.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "jest-extended": "^0.8.1",
+    "lint-staged": "^7.2.2",
     "nodemon": "^1.18.3",
+    "prettier": "^1.14.2",
     "shelljs": "^0.8.2"
   }
 }
