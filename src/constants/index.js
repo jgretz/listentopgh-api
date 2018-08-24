@@ -1,4 +1,4 @@
-// apply settings
+// apply private keys
 const privateKeys = {};
 try {
   const p = require('./private.js');
@@ -12,4 +12,6 @@ try {
 export const BUS_API_KEY = privateKeys.busApiKey;
 export const DATABASE_CONNECTION = privateKeys.databaseConnection;
 
+// apply public constants
 export const BUS_FEED = 'Port Authority Bus';
+export const CACHED_ROUTES = ['/api/version', '/api/busLocationsForDay'];

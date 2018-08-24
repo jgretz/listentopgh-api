@@ -34,6 +34,7 @@
     "node-bits-rest": "^0.0.32",
     "node-bits-spa": "^0.0.8",
     "node-bits-sql": "^0.0.62",
+    "node-cache": "^4.2.0",
     "pg": "^7.4.3",
     "pg-connection-string": "^2.0.0",
     "pg-hstore": "^2.3.2",

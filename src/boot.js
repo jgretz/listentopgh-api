@@ -4,7 +4,11 @@ import nodeBitsCode from 'node-bits-code';
 import nodeBitsSpa from 'node-bits-spa';
 import nodeBitsSql from 'node-bits-sql';
 
-import {configureCompression, configureDatabaseConnection} from './util';
+import {
+  configureCompression,
+  configureDatabaseConnection,
+  configureCache,
+} from './util';
 
 export default () => {
   nodeBits([
@@ -15,6 +19,7 @@ export default () => {
           methods: [GET, POST, PUT, DELETE, OPTIONS],
         }),
         bodyParser(),
+        configureCache(),
         configureCompression(),
       ],
     }),
