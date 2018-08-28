@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {getBusses} from '../../src/services';
+import {getBussesFromApi} from '../../src/services';
 import {BUS_API_URL, BUS_API_KEY, BUSTIME_RESPONSE} from '../../src/constants';
 
 const routesData = {
@@ -74,7 +74,7 @@ describe('getRoutes', () => {
       };
     });
 
-    result = await getBusses();
+    result = await getBussesFromApi();
   });
 
   it('should make a get call', () => {

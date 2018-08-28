@@ -1,4 +1,4 @@
-import configureDatabaseConnection from '../../src/util/configureDatabaseConnection';
+import configureDatabaseConnection from '../../src/util/createDatabaseConnection';
 import Sequelize from 'sequelize';
 
 describe('Configure Database Connection', () => {

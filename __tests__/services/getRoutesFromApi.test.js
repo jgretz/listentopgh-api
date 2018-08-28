@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {getRoutes} from '../../src/services';
+import {getRoutesFromApi} from '../../src/services';
 import {
   BUS_API_URL,
   BUS_API_KEY,
@@ -34,7 +34,7 @@ describe('getRoutes', () => {
   beforeAll(async () => {
     axios.get.mockReturnValue({status: 200, data: routesData});
 
-    result = await getRoutes();
+    result = await getRoutesFromApi();
     url = axios.get.mock.calls[0][0];
   });
 

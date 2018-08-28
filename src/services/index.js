@@ -1,3 +1,4 @@
 export {default as isDev} from './isDev';
-export {default as getBusses} from './getBusses';
-export {default as getRoutes} from './getRoutes';
+export {default as getBussesFromApi} from './getBussesFromApi';
+export {default as getRoutesFromApi} from './getRoutesFromApi';
+export {default as getBussesForDay} from './getBussesForDay';

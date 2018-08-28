@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import axios from 'axios';
 import {BUS_API_URL, BUS_API_KEY, BUSTIME_RESPONSE} from '../constants';
-import getRoutes from './getRoutes';
+import getRoutes from './getRoutesFromApi';
 
 export default async () => {
   const routes = await getRoutes();

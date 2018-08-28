@@ -33,7 +33,7 @@
     "node-bits-express": "^0.0.21",
     "node-bits-rest": "^0.0.32",
     "node-bits-spa": "^0.0.8",
-    "node-bits-sql": "^0.0.62",
+    "node-bits-sql": "^0.0.63",
     "node-cache": "^4.2.0",
     "pg": "^7.4.3",
     "pg-connection-string": "^2.0.0",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
+    "babel-eslint": "^9.0.0",
     "babel-jest": "^23.4.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",

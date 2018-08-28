@@ -6,7 +6,7 @@ import nodeBitsSql from 'node-bits-sql';
 
 import {
   configureCompression,
-  configureDatabaseConnection,
+  createDatabaseConnection,
   configureCache,
 } from './util';
 
@@ -29,6 +29,6 @@ export default () => {
     nodeBitsSpa({
       path: `${__dirname}/site`,
     }),
-    nodeBitsSql({connection: configureDatabaseConnection}),
+    nodeBitsSql({connection: createDatabaseConnection}),
   ]);
 };
