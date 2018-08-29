@@ -4,6 +4,7 @@ import nodeBitsExpress from 'node-bits-express';
 import nodeBitsCode from 'node-bits-code';
 import nodeBitsSql from 'node-bits-sql';
 import nodeBitsSpa from 'node-bits-spa';
+import nodeBitsScheduler from 'node-bits-scheduler';
 
 describe('Boot', () => {
   beforeAll(() => {
@@ -32,6 +33,10 @@ describe('Boot', () => {
 
   it('should invoke node-bits-spa', () => {
     expect(nodeBitsSpa).toHaveBeenCalled();
+  });
+
+  it('should invoke node-bits-scheduler', () => {
+    expect(nodeBitsScheduler).toHaveBeenCalled();
   });
 
   it('should set the dev port to 4005', () => {

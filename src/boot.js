@@ -3,11 +3,13 @@ import nodeBitsExpress, {cors, bodyParser} from 'node-bits-express';
 import nodeBitsCode from 'node-bits-code';
 import nodeBitsSpa from 'node-bits-spa';
 import nodeBitsSql from 'node-bits-sql';
+import nodeBitsScheduler from 'node-bits-scheduler';
 
 import {
   configureCompression,
   createDatabaseConnection,
   configureCache,
+  configureTasks,
 } from './util';
 
 export default () => {
@@ -29,6 +31,9 @@ export default () => {
     nodeBitsSpa({
       path: `${__dirname}/site`,
     }),
-    nodeBitsSql({connection: createDatabaseConnection}),
+    nodeBitsSql({connection: createDatabaseConnection, forceSync: true}),
+    nodeBitsScheduler({
+      jobs: configureTasks(),
+    }),
   ]);
 };
