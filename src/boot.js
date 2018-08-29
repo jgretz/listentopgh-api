@@ -31,7 +31,7 @@ export default () => {
     nodeBitsSpa({
       path: `${__dirname}/site`,
     }),
-    nodeBitsSql({connection: createDatabaseConnection, forceSync: true}),
+    nodeBitsSql({connection: createDatabaseConnection}),
     nodeBitsScheduler({
       jobs: configureTasks(),
     }),
