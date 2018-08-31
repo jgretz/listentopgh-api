@@ -8,3 +8,8 @@ export default {
   speed: Number,
   collectedOn: Date,
 };
+
+export const busLocationCollectedOnIndex = {
+  model: 'busLocation',
+  fields: [{field: 'collectedOn'}],
+};

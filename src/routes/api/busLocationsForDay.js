@@ -26,7 +26,7 @@ export default class BusLocationsForDay {
     }
 
     try {
-      const busses = await getBussesForDay(this.database, day);
+      const busses = await getBussesForDay(this.database, day.utc());
       res.json(busses);
     } catch (err) {
       logError(err);

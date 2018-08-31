@@ -3,7 +3,9 @@ import {getBussesFromApi} from '../services';
 
 export default async database => {
   const locations = await getBussesFromApi();
-  const now = moment().toDate();
+  const now = moment()
+    .utc()
+    .toDate();
 
   await Promise.all(
     locations.map(loc => {
