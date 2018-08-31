@@ -1,16 +1,19 @@
 import moment from 'moment';
 
 export default async (database, day) => {
+  const start = moment(day)
+    .startOf('day')
+    .format();
+  const end = moment(day)
+    .endOf('day')
+    .format();
+
   const results = await database.find('busLocation', {
     where: {
       collectedOn: {
         and: {
-          gte: moment(day)
-            .startOf('day')
-            .toDate(),
-          lte: moment(day)
-            .endOf('day')
-            .toDate(),
+          gte: start,
+          lte: end,
         },
       },
     },
