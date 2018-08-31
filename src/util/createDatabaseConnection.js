@@ -17,5 +17,6 @@ export default () => {
     sync: {
       logging: false,
     },
+    logging: false,
   });
 };
