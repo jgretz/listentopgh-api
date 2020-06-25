@@ -25,7 +25,7 @@
     "setupTestFrameworkScriptFile": "jest-extended"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "compression": "^1.7.3",
     "lodash": "^4.17.10",
     "node-bits": "^0.0.34",
